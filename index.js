@@ -9,8 +9,8 @@ window.onload = () => {
         const left = leftlength > 0 ? leftlength: 10;
 
         mainContainer.innerHTML = '';
-        mainContainer.style.height = `${top*50 + 20}px`;
-        mainContainer.style.width = `${left*50 + 20}px`;
+        mainContainer.style.width = `${top*50 + 20}px`;
+        mainContainer.style.height = `${left*50 + 20}px`;
 
         for(let i = 0; i < top; i++) {
             for(let j = 0; j < left; j++) {
@@ -19,10 +19,9 @@ window.onload = () => {
                 rectangleEl.style.width = '50px';
                 rectangleEl.style.border = '1px solid black';
                 
-                let h,l =0;
+                let h,l = 0;
                 h = 300*i/top;
-                l = 50 - 3*j;
-            
+                l = 50 - 3*j*(10/left);
                 rectangleEl.onmouseenter =  event => {
                     event.target.style.backgroundColor = `hsl(${h}, 100%, ${l}%)`;
                 };
